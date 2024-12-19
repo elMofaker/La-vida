@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Max Hotel</title>   <!-- الاسم الخاص بالصفحة -->
+    <link rel="stylesheet" href="style2.css">    <!-- ربط االصفحة بكود css -->
+</head>
+<body>
+
+    <!-- فديو الخلفية -->
+    <div class="video-background">
+        <video autoplay muted loop id="background-video">
+            <source src="videos/Maldives Luxury Resort - The Nautilus Maldives Private Island_2.mp4" type="video/mp4">
+            Your browser does not support video playback.
+        </video>
+    </div>
+
+    <!-- Main content -->
+    <div class="content">
+        <!-- Header section -->
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>   <!-- الصفحة الرئيسية -->
+                    <li><a href="about.html">About the hotel</a></li>    <!-- حول الفندق -->
+                    <li><a href="rooms.html">Rooms</a></li>    <!-- الغرف -->
+                    <li><a href="trips-concerts.html">Trips and parties</a></li>    <!-- الرحلات والحفلات -->
+                    <li><a href="contact.html">Contact us</a></li>    <!-- للتواصل معنا -->
+                   
+                </ul>
+            </nav>
+        </header>
+
+        <section class="trips-concerts">
+            <div class="container">
+                <h2>Trips and concerts</h2>
+                
+                <div class="section-content">
+                    <!-- المكان الخاص بحجز الرحلات -->
+                    <div class="trips">
+                        <h3>Distinctive trips</h3>
+                        <div class="trip-list">
+                            <div class="trip">
+                                <img src="imges/beach-6004041_640.jpg" alt="Trip 1">
+                                <h4>A trip to the Red Sea</h4>
+                                <p>Enjoy a pleasant trip to the Red Sea, including all amenities and drinks.</p>
+                                <p><strong>Price: $1000</strong></p>
+                                <button class="book-btn" data-trip="1">Book now</button>
+                            </div>
+                            <div class="trip">
+                                <img src="imges/arches-national-park-1846759_640.jpg" alt="Trip 2">
+                                <h4>A mountain trip in the south</h4>
+                                <p>Discover the beautiful mountains of the south with professional guides on an adventurous trip.</p>
+                                <p><strong>Price: $1500</strong></p>
+                                <button class="book-btn" data-trip="2">Book now</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- قسم الحفلات -->
+                    <div class="concerts">
+                        <h3>Upcoming concerts</h3>
+                        <div class="concert-list">
+                            <div class="concert">
+                                <img src="imges/Billie_Eilish_@Pukkelpop_2019_(48590585507).jpg" alt="party 1">
+                                <h4>Billie Eilish concert</h4>
+                                <p>Enjoy the most wonderful tunes with singer Billie Eilish on a magical night.</p>
+                                <p><strong>Price: $500</strong></p>
+                                <button class="book-btn" data-concert="1">Book now</button>
+                            </div>
+                            <div class="concert">
+                                <img src="imges/crowd-7896788_640.jpg" alt="party 2">
+                                <h4>Stars concert</h4>
+                                <p>Attend a wonderful concert by the famous band STARS.</p>
+                                <p><strong>Price: $700</strong></p>
+                                <button class="book-btn" data-concert="2">Book now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+              <!--  رسالة خاصة بحقوق الملكية-->
+        <footer>
+            <p>&copy; 2024 All rights reserved to the hotel</p>
+        </footer>
+          <!-- زر تشغيل وايقاف الصوت -->
+        <div class="audio-controls">
+            <button id="playPauseBtn">Play sound</button>
+            <input type="range" id="volumeControl" min="0" max="1" step="0.1" value="0.5">
+        </div>
+    </div>
+
+    <!-- عنصر الصوت في الخلفية -->
+    <audio id="background-audio" autoplay loop>
+        <source src="Music/mmm.mp3">
+        Your browser does not support audio playback.
+    </audio>
+
+    <script src="script2.js"></script> <!-- ربط الصفحة بكود جافا اسكربت -->
+</body>
+</html>
