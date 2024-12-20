@@ -9,11 +9,12 @@
     padding: 0;
     margin: 0;
 }
-img{
+
+img {
     width: 100%;
 }
 
-.center{
+.center {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -62,16 +63,58 @@ header {
 
 /* end nav */
 /* start hero */
-.hero{
+.hero {
     box-shadow: 0 12px 24px -10px black;
 }
+
 /* end hero */
 /* start about */
 .about {
     box-shadow: 1px 1px black;
-
 }
 
+/* end about */
+/* start scroll bar */
+.scroll-bar .slider-container {
+    position: relative;
+    width: 80%;
+    overflow-x: auto;
+    /* إضافة شريط التمرير */
+    white-space: nowrap;
+    /* عدم تكسير الأسطر في الصور */
+    scroll-behavior: smooth;
+    /* لتحسين التمرير */
+}
+
+.scroll-bar .slider {
+    display: inline-block;
+}
+
+.scroll-bar .slider img {
+    width: 100%;
+    height: auto;
+    display: inline-block;
+    /* لضمان عرض الصور في صف واحد */
+}
+
+.scroll-bar .fog {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 15%;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0) 100%);
+    z-index: 1;
+}
+
+.scroll-bar .fog-left {
+    left: 0;
+}
+
+.scroll-bar .fog-right {
+    right: 0;
+    transform: scaleX(-1);
+    /* لإضافة تأثير الضباب mirrored على الجانب الأيمن */
+}
 
 
 
