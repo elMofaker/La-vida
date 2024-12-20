@@ -1,5 +1,4 @@
 // script.js
-
 // الانتظار حتى يتم تحميل محتويات الصفحة بالكامل قبل تنفيذ أي كود
 document.addEventListener('DOMContentLoaded', function() {
     // تحديد النموذج (الفورم) الخاص بالحجز
@@ -103,3 +102,5 @@ document.getElementById('review-form').addEventListener('submit', function(event
         newReview.classList.remove('fade-in');
     }, 1000);
 });
+
+

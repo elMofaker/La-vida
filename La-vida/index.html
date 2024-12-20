@@ -1,204 +1,304 @@
 <!DOCTYPE html>
 <html lang="ar">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Max Hotel</title>   <!-- الاسم الخاص بالصفحة -->
-    <link rel="stylesheet" href="style.css">   <!-- ربط االصفحة بكود css -->
-   
-    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- style css -->
+    <link rel="stylesheet" href="./src/style/style.css">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <title>La-vida</title>
 </head>
+
 <body>
-
-
-
-
-
-
-    <!-- الاختصارات الاولية -->
     <header>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>     <!-- الصفحة الرئيسية -->
-                <li><a href="#about">About the hotel</a></li>    <!-- حول الفندق -->
-                <li><a href="#rooms">Rooms</a></li>     <!-- الغرف -->
-                <li><a href="#booking">Booking</a></li>    <!-- الحجز -->
-                <li><a href="trips-concerts.html">Trips and parties</a></li>    <!-- خاص بصفحة الرحلات والحفلات -->
-                <li><a href="contact.html">Contact us</a></li>   <!-- للتواصل معنا -->
-                <li class="dropdown">
-                    <a href="javascript:void(0)">Services</a>    <!-- الخدمات -->
-                    <div class="dropdown-content">
-                        <a href="#">Spa</a>   <!-- خدمة المساج -->
-                        <a href="#">Restaurants</a>    <!-- خدمة الطعام -->
-                        <a href="#">pool</a>    <!-- حمام السباحة -->
-                    </div>
-                </li>
-            </ul>
-            <button id="toggle-music-btn">Toggle Music</button>    <!-- زر تشغيل وايقاف الصوت -->
+        <nav class="navbar navbar-expand-lg ps-2 pe-2" id="navbar">
+            <div class="container-fluid d-flex justify-content-between">
+                <a class="navbar-brand fw-semibold text-nav m-0" href="#">La-vida</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active text-nav" aria-current="page" href="#home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-nav" href="#about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-nav" href="#rooms">Rooms</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-nav" href="#booking">Booking</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-nav" href="contact.html">Contact</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-nav" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Services
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item text-nav" href="#">Spa</a></li>
+                                <li><a class="dropdown-item text-nav" href="#">Restaurants</a></li>
+                                <li><a class="dropdown-item text-nav" href="#">Pool</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item text-nav" href="#trips-concerts.html">Trips and parties</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
-    
-  
-    <audio id="background-music" autoplay muted loop>     <!-- لوب تشغيل الصوت -->
-        <source src="Music/mmm.mp3" type="audio/mp3">    <!-- الصوت المضاف -->
-        Your browser does not support the audio element.
-    </audio>
-    
 
-
-        <!-- فديو الصفحة الرئيسية -->
-    <section id="home" class="hero" data-aos="fade-up" data-aos-duration="1000">
-        <video autoplay muted loop id="background-video">   <!-- لوب تشغيل الفيديو -->
-            <source src="videos/Maldives Luxury Resort - The Nautilus Maldives Private Island.mp4" type="video/mp4">
-           
+    <!-- start hero -->
+    <section id="home"
+        class="hero vh-100 text-center text-white position-relative overflow-hidden d-flex align-items-center justify-content-center"
+        style="background: #0000009e;">
+        <video autoplay muted loop id="background-video"
+            class="position-absolute w-100 h-100 top-0 start-0 object-fit-cover">
+            <source src="./public/videos/Maldives Luxury Resort - The Nautilus Maldives Private Island.mp4"
+                type="video/mp4">
+            Your browser does not support the video tag.
         </video>
-        <div class="hero-text">
-             <!-- الجملة التعريفية للفندق -->
-            <h1>Welcome to the Max Hotel</h1>
-            <p>Luxurious accommodation in the heart of the sea, the beauty of nature and the most beautiful landscapes</p>
-            <a href="#booking" class="btn">Book now</a>    <!-- زر الحجز  -->
-        </div>
-        
-    </section>
 
-          <!-- حول الفندق وخدماتة -->
-    <section id="about" class="about" data-aos="fade-up" data-aos-duration="1000">
-        <h2>About the hotel</h2>
-        <p>The Max Hotel is one of the best hotels in the world, offering you a unique experience with all the luxurious facilities you need for a comfortable stay.</p>
-        
-        <div class="about-description">
-            <div class="about-box">
-                <img src="imges/people-2593251_640.jpg" alt="غرفة فاخرة" class="about-image">
-                <div class="about-text">
-                    <h3>An unforgettable luxury experience</h3>
-                    <p>Enjoy a luxurious stay in the heart of the city where you find luxury and comfort around every corner. Our hotel offers you five-star service in a sophisticated atmosphere, making every moment you spend with us unforgettable.</p>
-                </div>
-            </div>
-    
-            <div class="about-box">
-                <img src="imges/beach-6301597_640.jpg" alt="موقع الفندق" class="about-image">
-                <div class="about-text">
-                    <h3>Our excellent location</h3>
-                    <p>Our excellent location in the heart of the city guarantees you access to the most prominent tourist attractions, shops and restaurants. The luxury hotel offers you all modern amenities, from elegant rooms to distinguished services.</p>
-                </div>
-            </div>
-    
-            <div class="about-box">
-                <img src="imges/pool-2128578_640.jpg" alt="خدمات الفندق" class="about-image">
-                <div class="about-text">
-                    <h3>Services and facilities</h3>
-                    <p>We offer you a range of integrated services such as spa services, fitness facilities, and fine dining to ensure your comfort throughout your stay. Enjoy the highest level of services, from 24-hour room service, to organizing tours and excursions.</p>
-                </div>
-            </div>
-    
-            <div class="about-box">
-                <img src="imges/family-6398107_640.jpg" alt="عائلة في الفندق" class="about-image">
-                <div class="about-text">
-                    <h3>Ideal stay for families</h3>
-                   <p>Our hotel is the ideal choice for families looking for comfort and fun. With many activities and special offers for children, we offer you an unforgettable family experience.</p>
-                </div>
-            </div>
-    
-            <div class="about-box">
-                <img src="imges/restaurant-449952_640.jpg" alt="خدمات فاخرة" class="about-image">
-                <div class="about-text">
-                    <h3>Luxury around every corner</h3>
-                    <p>Every corner of the luxury hotel is specially designed to provide an exceptional luxury experience, from the spacious rooms to the world-class customer service. We are here to provide you with a hotel experience that exceeds all your expectations.</p>
-                </div>
-            </div>
+        <div class="container position-relative">
+            <h1 class="display-3 fw-bold mb-4" data-bs-toggle="tooltip" data-bs-placement="top"
+                title="Welcome to our luxurious hotel!">
+                Welcome to the Max Hotel
+            </h1>
+            <p class="mb-4" style="color: #a7a7a7;">
+                Luxurious accommodation in the heart of the sea, the beauty of nature and the most
+                beautiful landscapes.
+            </p>
+            <a href="#booking" class="btn btn-warning btn-lg">Book Now</a>
         </div>
     </section>
-    
-    
+    <!-- end hero -->
 
-       <!-- غرف مختلفة -->
+    <!-- start about -->
+    <section id="about" class="about pt-5 pb-5 " data-aos="fade-up" data-aos-duration="1000">
+        <h2 class="text-center fw-bold fs-2">About the hotel</h1>
+        <p class="text-center">The Max Hotel is one of the best hotels in the world, offering you a unique experience with all the luxurious
+            facilities you need for a comfortable stay.</p>
+        <hr>
+        <div class="container pt-3 pb-3">
+            <div class="row">
+                <div class="col-lg-6 col-md-12 col-sm-12 pt-4 pb-4">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-4 col-lg-4 pt-4 pb-4">
+                            <nav id="navbar-example3" class="center h-100 flex-column align-items-stretch pe-4 border-end">
+                                <nav class="nav nav-pills flex-column">
+                                    <a class="nav-link" href="#item-1">Who are we?</a>
+                                    <nav class="nav nav-pills flex-column">
+                                        <a class="nav-link ms-3 my-1" href="#item-1-1">What should we do?</a>
+                                        <a class="nav-link ms-3 my-1" href="#item-1-2">Why choose us?</a>
+                                    </nav>
+                                    <a class="nav-link" href="#item-2">Item 2</a>
+                                    <a class="nav-link" href="#item-3">Item 3</a>
+                                    <nav class="nav nav-pills flex-column">
+                                        <a class="nav-link ms-3 my-1" href="#item-3-1">Our advantages</a>
+                                        <a class="nav-link ms-3 my-1" href="#item-3-2">How to start with us?</a>
+                                    </nav>
+                                </nav>
+                            </nav>
+                            <hr>
+                        </div>
+                        <div class="col-sm-12 col-md-8 col-lg-8 overflow-y-auto pt-4 pb-4" style="max-height: 430px; box-shadow: inset 0 0 13px -7px black;">
+                            <div data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-smooth-scroll="true"
+                                class="scrollspy-example-2" tabindex="0">
+                                <div id="item-1">
+                                    <h4>Item 1</h4>
+                                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, earum
+                                        recusandae? Totam quis, corrupti nam facere accusamus alias cupiditate
+                                        distinctio molestiae non? Illo error et quaerat consectetur eaque, ea pariatur.
+                                    </p>
+                                </div>
+                                <div id="item-1-1">
+                                    <h5>Item 1-1</h5>
+                                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, earum
+                                        recusandae? Totam quis, corrupti nam facere accusamus alias cupiditate
+                                        distinctio molestiae non? Illo error et quaerat consectetur eaque, ea pariatur.
+                                    </p>
+                                </div>
+                                <div id="item-1-2">
+                                    <h5>Item 1-2</h5>
+                                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, earum
+                                        recusandae? Totam quis, corrupti nam facere accusamus alias cupiditate
+                                        distinctio molestiae non? Illo error et quaerat consectetur eaque, ea pariatur.
+                                    </p>
+                                </div>
+                                <div id="item-2">
+                                    <h4>Item 2</h4>
+                                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, earum
+                                        recusandae? Totam quis, corrupti nam facere accusamus alias cupiditate
+                                        distinctio molestiae non? Illo error et quaerat consectetur eaque, ea pariatur.
+                                    </p>
+                                </div>
+                                <div id="item-3">
+                                    <h4>Item 3</h4>
+                                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, earum
+                                        recusandae? Totam quis, corrupti nam facere accusamus alias cupiditate
+                                        distinctio molestiae non? Illo error et quaerat consectetur eaque, ea pariatur.
+                                    </p>
+                                </div>
+                                <div id="item-3-1">
+                                    <h5>Item 3-1</h5>
+                                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, earum
+                                        recusandae? Totam quis, corrupti nam facere accusamus alias cupiditate
+                                        distinctio molestiae non? Illo error et quaerat consectetur eaque, ea pariatur.
+                                    </p>
+                                </div>
+                                <div id="item-3-2">
+                                    <h5>Item 3-2</h5>
+                                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, earum
+                                        recusandae? Totam quis, corrupti nam facere accusamus alias cupiditate
+                                        distinctio molestiae non? Illo error et quaerat consectetur eaque, ea pariatur.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12 col-sm-12 pt-4 pb-4 cnter">
+                    <div class="swiper mySwiper ">
+                        <div class="swiper-wrapper ">
+                            <div class="swiper-slide">
+                                <img width="100%" src="./public/img/people-2593251_640.jpg" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./public/img/beach-6301597_640.jpg"/>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./public/img/pool-2128578_640.jpg"/>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./public/img/family-6398107_640.jpg" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./public/img/restaurant-449952_640.jpg" />
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        </div>
+    </section>
+
+    <!-- end about -->
+
+    <!-- غرف مختلفة -->
     <section id="rooms" class="rooms" data-aos="fade-up" data-aos-duration="1000">
         <h2>Our rooms</h2>
         <div class="room-list">
-            <div class="room" onclick="window.location.href='#booking';">  <!-- عند الضغط علي الغرفة يذهب بك الي مان الحجز -->
-                <img src="imges/bedroom-6686061_640.jpg" alt="غرفة فاخرة">
+            <div class="room" onclick="window.location.href='#booking';">
+                <!-- عند الضغط علي الغرفة يذهب بك الي مان الحجز -->
+                <img src="./public/img/bedroom-6686061_640.jpg" alt="غرفة فاخرة">
                 <h3>Deluxe room</h3>
                 <p>Luxury accommodation with a wonderful view</p>
             </div>
             <div class="room" onclick="window.location.href='#booking';">
-                <img src="imges/furniture-998265_640.jpg" alt="غرفة فاخرة">
+                <img src="./public/img/furniture-998265_640.jpg" alt="غرفة فاخرة">
                 <h3>Executive room</h3>
                 <p>Comfort and luxury at its finest</p>
             </div>
         </div>
     </section>
-         <!-- الغرف المتاحة واسعارها -->
-<section id="available-rooms" class="available-rooms" data-aos="fade-up" data-aos-duration="1000">
-    <h2>Available Rooms & Pricing</h2>
-    <div class="room-pricing-list">
-        <div class="room-pricing box" data-aos="zoom-in" data-aos-duration="1000" onclick="window.location.href='#booking';">
-            <img src="imges/bedroom-3475656_640 (1).jpg" alt="Deluxe Room" class="room-image">
-            <h3>Deluxe Room</h3>
-            <p>Available rooms: <span id="deluxe-rooms-available">20</span></p>
-            <p>Price per night: <span id="deluxe-price">$200</span></p>
-            <p>Luxurious accommodation with a stunning view. Perfect for couples or individuals seeking comfort and elegance.</p>
+    <!-- الغرف المتاحة واسعارها -->
+    <section id="available-rooms" class="available-rooms" data-aos="fade-up" data-aos-duration="1000">
+        <h2>Available Rooms & Pricing</h2>
+        <div class="room-pricing-list">
+            <div class="room-pricing box" data-aos="zoom-in" data-aos-duration="1000"
+                onclick="window.location.href='#booking';">
+                <img src="./public/img/bedroom-3475656_640 (1).jpg" alt="Deluxe Room" class="room-image">
+                <h3>Deluxe Room</h3>
+                <p>Available rooms: <span id="deluxe-rooms-available">20</span></p>
+                <p>Price per night: <span id="deluxe-price">$200</span></p>
+                <p>Luxurious accommodation with a stunning view. Perfect for couples or individuals seeking comfort and
+                    elegance.</p>
+            </div>
+            <div class="room-pricing box" data-aos="zoom-in" data-aos-duration="1000"
+                onclick="window.location.href='#booking';">
+                <img src="./public/img/employee-7366213_640.jpg" alt="Executive Room" class="room-image">
+                <h3>Executive Room</h3>
+                <p>Available rooms: <span id="executive-rooms-available">25</span></p>
+                <p>Price per night: <span id="executive-price">$300</span></p>
+                <p>Perfect for business travelers, offering spacious work areas and premium amenities for a comfortable
+                    stay.</p>
+            </div>
+            <div class="room-pricing box" data-aos="zoom-in" data-aos-duration="1000"
+                onclick="window.location.href='#booking';">
+                <img src="./public/img/hotel-1979406_640.jpg" alt="Luxury Suite" class="room-image">
+                <h3>Luxury Suite</h3>
+                <p>Available rooms: <span id="luxury-suite-rooms-available">30</span></p>
+                <p>Price per night: <span id="luxury-suite-price">$500</span></p>
+                <p>Experience ultimate luxury in our spacious suites, designed for those seeking the finest in comfort
+                    and opulence.</p>
+            </div>
+            <div class="room-pricing box" data-aos="zoom-in" data-aos-duration="1000"
+                onclick="window.location.href='#booking';">
+                <img src="./public/img/sea-943428_640.jpg" alt="Private Suite" class="room-image">
+                <h3>Private Suite</h3>
+                <p>Available rooms: <span id="private-suite-rooms-available">10</span></p>
+                <p>Price per night: <span id="private-suite-price">$1000</span></p>
+                <p>For the ultimate exclusive experience, our private suite offers unparalleled privacy, luxury, and
+                    views.</p>
+            </div>
+            <div class="room-pricing box" data-aos="zoom-in" data-aos-duration="1000"
+                onclick="window.location.href='#booking';">
+                <img src="./public/img/whisky-8381774_640.jpg" alt="Family Suite" class="room-image">
+                <h3>Family Suite</h3>
+                <p>Available rooms: <span id="family-suite-rooms-available">15</span></p>
+                <p>Price per night: <span id="family-suite-price">$600</span></p>
+                <p>Our spacious family suite offers comfort and relaxation for families with children. The perfect
+                    choice for creating unforgettable family memories.</p>
+            </div>
         </div>
-        <div class="room-pricing box" data-aos="zoom-in" data-aos-duration="1000" onclick="window.location.href='#booking';">
-            <img src="imges/employee-7366213_640.jpg" alt="Executive Room" class="room-image">
-            <h3>Executive Room</h3>
-            <p>Available rooms: <span id="executive-rooms-available">25</span></p>
-            <p>Price per night: <span id="executive-price">$300</span></p>
-            <p>Perfect for business travelers, offering spacious work areas and premium amenities for a comfortable stay.</p>
-        </div>
-        <div class="room-pricing box" data-aos="zoom-in" data-aos-duration="1000" onclick="window.location.href='#booking';">
-            <img src="imges/hotel-1979406_640.jpg" alt="Luxury Suite" class="room-image">
-            <h3>Luxury Suite</h3>
-            <p>Available rooms: <span id="luxury-suite-rooms-available">30</span></p>
-            <p>Price per night: <span id="luxury-suite-price">$500</span></p>
-            <p>Experience ultimate luxury in our spacious suites, designed for those seeking the finest in comfort and opulence.</p>
-        </div>
-        <div class="room-pricing box" data-aos="zoom-in" data-aos-duration="1000" onclick="window.location.href='#booking';">
-            <img src="imges/sea-943428_640.jpg" alt="Private Suite" class="room-image">
-            <h3>Private Suite</h3>
-            <p>Available rooms: <span id="private-suite-rooms-available">10</span></p>
-            <p>Price per night: <span id="private-suite-price">$1000</span></p>
-            <p>For the ultimate exclusive experience, our private suite offers unparalleled privacy, luxury, and views.</p>
-        </div>
-        <div class="room-pricing box" data-aos="zoom-in" data-aos-duration="1000" onclick="window.location.href='#booking';">
-            <img src="imges/whisky-8381774_640.jpg" alt="Family Suite" class="room-image">
-            <h3>Family Suite</h3>
-            <p>Available rooms: <span id="family-suite-rooms-available">15</span></p>
-            <p>Price per night: <span id="family-suite-price">$600</span></p>
-            <p>Our spacious family suite offers comfort and relaxation for families with children. The perfect choice for creating unforgettable family memories.</p>
-        </div>
-    </div>
-</section>
+    </section>
 
-       <!-- مكان الحجز -->
+    <!-- مكان الحجز -->
     <section id="booking" class="booking" data-aos="fade-up" data-aos-duration="1000">
         <h2>Book your stay</h2>
         <form action="#" method="POST" id="booking-form">
             <div class="form-group">
-                <label for="check-in">Arrival date:</label>    <!-- موعد الوصول -->
+                <label for="check-in">Arrival date:</label> <!-- موعد الوصول -->
                 <input type="date" id="check-in" name="check-in" required>
             </div>
             <div class="form-group">
-                <label for="check-out">Departure date:</label>   <!-- موعد المغادرة -->
+                <label for="check-out">Departure date:</label> <!-- موعد المغادرة -->
                 <input type="date" id="check-out" name="check-out" required>
             </div>
             <div class="form-group">
-                <label for="guests">Number of guests:</label>   <!-- عدد الافراد -->
+                <label for="guests">Number of guests:</label> <!-- عدد الافراد -->
                 <select id="guests" name="guests">
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
                     <option value="4">4</option>
                 </select>
-            </div>    
-            <button type="submit" class="submit-btn">Confirm your reservation</button>   <!-- زر تسجيل الحجز -->
+            </div>
+            <button type="submit" class="submit-btn">Confirm your reservation</button> <!-- زر تسجيل الحجز -->
             <div id="confirmation-message" class="confirmation-message"></div>
         </form>
     </section>
 
-
-    
-
-         <!-- مجموعةمن االخدمات المقدمة من الفندق -->
+    <!-- مجموعةمن االخدمات المقدمة من الفندق -->
     <section id="services" class="services" data-aos="fade-up" data-aos-duration="1000">
         <h2>Our services</h2>
         <div class="service-list">
@@ -214,21 +314,20 @@
             </div>
         </div>
     </section>
-    
 
-       <!-- مكان خاص بتقيم المتابعين للفندق -->
+    <!-- مكان خاص بتقيم المتابعين للفندق -->
     <section id="testimonials" class="testimonials" data-aos="fade-up" data-aos-duration="1000">
         <div class="reviews">
             <h2>Visitor ratings</h2>
-<form id="review-form">
-    <label for="review">Enter your rating:</label>
-    <textarea id="review" rows="4" placeholder="Write your review here..." required></textarea>
-    <button type="submit">Send evaluation</button>
-</form>
-<div id="reviews-list">
-    <!-- ستظهر التقييمات هنا -->
-</div>
-        <!-- بعض من تقيمات الاشخاص -->
+            <form class="form-contact" id="review-form">
+                <label for="review">Enter your rating:</label>
+                <textarea id="review" rows="4" placeholder="Write your review here..." required></textarea>
+                <button type="submit">Send evaluation</button>
+            </form>
+            <div id="reviews-list">
+                <!-- ستظهر التقييمات هنا -->
+            </div>
+            <!-- بعض من تقيمات الاشخاص -->
         </div>
         <h2>Customer opinions</h2>
         <div class="testimonial-container">
@@ -248,22 +347,51 @@
             </div>
         </div>
     </section>
-  
 
-
-
-
-        <!--  رسالة خاصة بحقوق الملكية-->
     <footer>
         <p>&copy;2024 Max Hotel. All rights reserved</p>
     </footer>
 
-    
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <!-- bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <!-- js -->
+    <script src="./src/js/script.js"></script>
+    <!-- js scroll -->
+    <script src="https://unpkg.com/scrollreveal@4.3.3/dist/scrollreveal.min.js"></script>
+    // nav scroll
     <script>
-        AOS.init();
+        const navbar = document.getElementById('navbar');
+
+        window.onscroll = function () {
+            if (window.scrollY > 0) {
+                navbar.classList.add('scrolled');
+                navbar.classList.remove('not-scroll');
+            } else {
+                navbar.classList.add('not-scroll');
+                navbar.classList.remove('scrolled');
+            };
+        }
     </script>
- <!-- ربط الصفحة بكود جافا اسكربت -->
-    <script src="script.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            effect: "cube",
+            grabCursor: true,
+            cubeEffect: {
+                shadow: true,
+                slideShadows: true,
+                shadowOffset: 20,
+                shadowScale: 0.94,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+            },
+        });
+    </script>
 </body>
+
 </html>
