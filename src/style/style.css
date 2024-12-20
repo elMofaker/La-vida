@@ -2,6 +2,7 @@
     --black-color: #000;
     --white-color: #fff;
     --rgba-black-color: #ffffff14;
+    --orang-color: #e68900;
 }
 
 * {
@@ -69,8 +70,37 @@ header {
 
 /* end hero */
 /* start about */
-.about {
-    box-shadow: 1px 1px black;
+
+.about .text-about-answer{
+    max-height: 430px; 
+    box-shadow: inset 0 0 13px -7px black;
+}
+.about .nav-link{
+    border-left: 1px solid var(--orang-color);
+    color: var(--black-color);
+}
+.about .nav-link :hover{
+    color: var(--white-color);
+    background-color: var(--orang-color);
+}
+.about .nav-link:focus{
+    color: var(--white-color);
+}
+.about .nav-link.active{
+    background-color: var(--orang-color);
+
+}
+
+@media (max-width: 445px) {
+    .about nav{
+        padding: 0;
+    }
+    .about nav a{
+        padding: 5px;
+    }
+    .about .text-about-cuis{
+        font-size: .9rem;
+    }
 }
 
 /* end about */
