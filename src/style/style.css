@@ -9,6 +9,8 @@
     font-family: 'Arial', sans-serif;
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
+    
 }
 
 img {
@@ -22,7 +24,7 @@ img {
 }
 
 .container-shadow-bottom{
-    box-shadow: 0 6px 12px -9px var(--black-color);
+    box-shadow: 0 8px 14px -12px var(--black-color); 
 }
 
 /* start nav */
@@ -193,7 +195,11 @@ header {
     }
 
 }
-
+/* start scroll bar */
+.scroll-bar{
+    
+}
+/* end scroll bar */
 /* start comment */
 .container-img-comment img {
     width: 60px;
@@ -247,12 +253,9 @@ footer {
 
 /* تنسيق قسم الحجز */
 .booking {
-    padding: 60px 20px;
-    /* إضافة حشوة داخلية للقسم بمقدار 60px من الأعلى والأسفل و20px من الجانبين */
     background-color: #f1f1f1;
-    /* تعيين خلفية القسم إلى اللون الرمادي الفاتح */
     text-align: center;
-    /* محاذاة النصوص داخل القسم إلى المنتصف */
+    box-shadow: 0 0px 27px -12px var(--black-color);
 }
 
 /* تنسيق العنوان h2 داخل قسم الحجز */

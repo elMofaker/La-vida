@@ -91,12 +91,13 @@
 
     <!-- start about -->
     <section id="about" class="about pt-5 pb-5 container-shadow-bottom" data-aos="fade-up" data-aos-duration="1000">
-        <h2 class="text-center fw-bold fs-2">About the hotel</h2>
-        <p class="text-center">The Max Hotel is one of the best hotels in the world, offering you a unique
-            experience with all the luxurious
-            facilities you need for a comfortable stay.</p>
-        <hr>
+
         <div class="container pt-3 pb-3">
+            <h2 class="text-center fw-bold fs-2">About the hotel</h2>
+            <p class="text-center">The Max Hotel is one of the best hotels in the world, offering you a unique
+                experience with all the luxurious
+                facilities you need for a comfortable stay.</p>
+            <hr>
             <div class="row">
                 <div class="col-lg-6 col-md-12 col-sm-12 pt-4 pb-4">
                     <div class="row center">
@@ -211,15 +212,15 @@
     </section>
     <!-- end about -->
 
-    <!-- img scroll portfolio -->
+    <!-- start Our rooms  -->
     <div class="portfolio pt-5 pb-5 container-shadow-bottom">
         <div class="container">
-            <h2 class="text-center fw-bold fs-2">portfolio the hotel</h2>
+            <h2 class="text-center fw-bold fs-2">Our rooms the hotel</h2>
             <p class="text-center">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore dignissimos
                 tenetur
                 quia dolore fugit iste,</p>
             <hr>
-            <div class="swiper mySwiper2">
+            <div class="swiper mySwiper2 mb-1">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <img src="https://i.pinimg.com/736x/3a/ea/c6/3aeac65d93b9c074b540e9ea78f7cbd2.jpg" />
@@ -347,27 +348,17 @@
 
         </div>
     </div>
-    <!--  -->
+    <!-- end our rooms  -->
 
+    <!-- start scroll bar  -->
+    <div class="scroll-bar">
+
+    </div>
+    <!-- end scroll bar -->
     <!-- غرف مختلفة -->
-    <section id="rooms" class="rooms" data-aos="fade-up" data-aos-duration="1000">
-        <h2>Our rooms</h2>
-        <div class="room-list">
-            <div class="room" onclick="window.location.href='#booking';">
-                <!-- عند الضغط علي الغرفة يذهب بك الي مان الحجز -->
-                <img src="./public/img/bedroom-6686061_640.jpg" alt="غرفة فاخرة">
-                <h3>Deluxe room</h3>
-                <p>Luxury accommodation with a wonderful view</p>
-            </div>
-            <div class="room" onclick="window.location.href='#booking';">
-                <img src="./public/img/furniture-998265_640.jpg" alt="غرفة فاخرة">
-                <h3>Executive room</h3>
-                <p>Comfort and luxury at its finest</p>
-            </div>
-        </div>
-    </section>
+
     <!-- الغرف المتاحة واسعارها -->
-    <section id="available-rooms" class="available-rooms" data-aos="fade-up" data-aos-duration="1000">
+    <section id="available-rooms" class="available-rooms" data-aos="fade-up" data-aos-duration="1000" style="box-shadow: 0 -7px 18px -12px black;">
         <h2>Available Rooms & Pricing</h2>
         <div class="room-pricing-list">
             <div class="room-pricing box" data-aos="zoom-in" data-aos-duration="1000"
@@ -419,29 +410,89 @@
     </section>
 
     <!-- مكان الحجز -->
-    <section id="booking" class="booking" data-aos="fade-up" data-aos-duration="1000">
-        <h2>Book your stay</h2>
-        <form action="#" method="POST" id="booking-form">
-            <div class="form-group">
-                <label for="check-in">Arrival date:</label> <!-- موعد الوصول -->
-                <input type="date" id="check-in" name="check-in" required>
+    <section id="booking" class="booking pt-5 pb-5" data-aos="fade-up" data-aos-duration="1000">
+        <div class="conainer">
+            <div class="row">
+                <div class="container col-lg-4 col-md-6 col-sm-12 pt-4 pb-4 p-4" style="border-right: 1px solid black;">
+                    <h2>Book your stay</h2>
+                    <form action="#" method="POST" id="booking-form">
+                        <div class="form-group">
+                            <label for="check-in">Arrival date:</label> <!-- موعد الوصول -->
+                            <input type="date" id="check-in" name="check-in" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="check-out">Departure date:</label> <!-- موعد المغادرة -->
+                            <input type="date" id="check-out" name="check-out" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="guests">Number of guests:</label> <!-- عدد الافراد -->
+                            <select id="guests" name="guests">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="submit-btn">Confirm your reservation</button> <!-- زر تسجيل الحجز -->
+                        <div id="confirmation-message" class="confirmation-message"></div>
+                    </form>
+                </div>
+    
+                <div class="col-lg-6 col-md-6 col-sm-12 p-4">
+                    <h2>Some questions you may need</h2>
+    
+                    <div class="accordion accordion-flush" id="accordionFlushExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                    aria-controls="flush-collapseOne">
+                                    Who are we?
+                                </button>
+                            </h2>
+                            <div id="flush-collapseOne" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">Placeholder content for this accordion, which is intended to
+                                    demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion
+                                    body.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseTwo" aria-expanded="false"
+                                    aria-controls="flush-collapseTwo">
+                                    Accordion Item #2
+                                </button>
+                            </h2>
+                            <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">Placeholder content for this accordion, which is intended to
+                                    demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion
+                                    body. Let's imagine this being filled with some actual content.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseThree" aria-expanded="false"
+                                    aria-controls="flush-collapseThree">
+                                    Accordion Item #3
+                                </button>
+                            </h2>
+                            <div id="flush-collapseThree" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">Placeholder content for this accordion, which is intended to
+                                    demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion
+                                    body. Nothing more exciting happening here in terms of content, but just filling up the
+                                    space to make it look, at least at first glance, a bit more representative of how this
+                                    would look in a real-world application.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="form-group">
-                <label for="check-out">Departure date:</label> <!-- موعد المغادرة -->
-                <input type="date" id="check-out" name="check-out" required>
-            </div>
-            <div class="form-group">
-                <label for="guests">Number of guests:</label> <!-- عدد الافراد -->
-                <select id="guests" name="guests">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                </select>
-            </div>
-            <button type="submit" class="submit-btn">Confirm your reservation</button> <!-- زر تسجيل الحجز -->
-            <div id="confirmation-message" class="confirmation-message"></div>
-        </form>
+        </div>
     </section>
 
     <!-- مجموعةمن االخدمات المقدمة من الفندق -->
@@ -449,12 +500,12 @@
         <h2>Our services</h2>
         <div class="service-list">
             <div class="service" onclick="window.location.href='#booking';">
-                <img src="imges/massage-4916847_640.jpg" alt="منتجع صحي">
+                <img src="./public/img/massage-4916847_640.jpg" alt="منتجع صحي">
                 <h3>Spa</h3>
                 <p>Enjoy an unparalleled relaxation experience at our spa.</p>
             </div>
             <div class="service" onclick="window.location.href='#booking';">
-                <img src="imges/lasagna-5994612_640.jpg" alt="مطاعم عالمية">
+                <img src="./public/img/lasagna-5994612_640.jpg" alt="مطاعم عالمية">
                 <h3>International restaurants</h3>
                 <p>Taste the most delicious international cuisine in our restaurants.</p>
             </div>
@@ -479,93 +530,93 @@
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-12 p-5">
                     <h2>Customer opinions</h2>
-                    
-                        <div class="swiper mySwiper-comment w-100 h-auto">
-                            <div class="swiper-wrapper w-100">
 
-                                <div class="swiper-slide">
-                                    <div class="card center p-4">
-                                        <p class="pt-2 pb-2 fs-3">"أفضل تجربة فندقية مررت بها! الخدمة كانت ممتازة."</p>
-                                        <h3 class="pt-2 pb-2 fs-4 text-black-50">Ahmed Mohamed</h3>
-                                        <div class="container-img-comment pt-3 pb-3">
-                                            <img src="./public/img/man-1690965_640.jpg" alt="أحمد العلي">
-                                        </div>
-                                    </div>
-                                </div>
+                    <div class="swiper mySwiper-comment w-100 h-auto">
+                        <div class="swiper-wrapper w-100">
 
-                                <div class="swiper-slide">
-                                    <div class="card center p-4">
-                                        <p class="pt-2 pb-2 fs-3">"أفضل تجربة فندقية مررت بها! الخدمة كانت ممتازة."</p>
-                                        <h3 class="pt-2 pb-2 fs-4 text-black-50">Ahmed Mohamed</h3>
-                                        <div class="container-img-comment pt-3 pb-3">
-                                            <img src="./public/img/sun-7350734_640.jpg" alt="أحمد العلي">
-                                        </div>
+                            <div class="swiper-slide">
+                                <div class="card center p-4">
+                                    <p class="pt-2 pb-2 fs-3">"أفضل تجربة فندقية مررت بها! الخدمة كانت ممتازة."</p>
+                                    <h3 class="pt-2 pb-2 fs-4 text-black-50">Ahmed Mohamed</h3>
+                                    <div class="container-img-comment pt-3 pb-3">
+                                        <img src="./public/img/man-1690965_640.jpg" alt="أحمد العلي">
                                     </div>
                                 </div>
-
-                                
-                                <div class="swiper-slide">
-                                    <div class="card center p-4">
-                                        <p class="pt-2 pb-2 fs-3">"أفضل تجربة فندقية مررت بها! الخدمة كانت ممتازة."</p>
-                                        <h3 class="pt-2 pb-2 fs-4 text-black-50">Ahmed Mohamed</h3>
-                                        <div class="container-img-comment pt-3 pb-3">
-                                            <img src="./public/img/man-1690965_640.jpg" alt="أحمد العلي">
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <div class="swiper-slide">
-                                    <div class="card center p-4">
-                                        <p class="pt-2 pb-2 fs-3">"أفضل تجربة فندقية مررت بها! الخدمة كانت ممتازة."</p>
-                                        <h3 class="pt-2 pb-2 fs-4 text-black-50">Ahmed Mohamed</h3>
-                                        <div class="container-img-comment pt-3 pb-3">
-                                            <img src="./public/img/sun-7350734_640.jpg" alt="أحمد العلي">
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <div class="swiper-slide">
-                                    <div class="card center p-4">
-                                        <p class="pt-2 pb-2 fs-3">"أفضل تجربة فندقية مررت بها! الخدمة كانت ممتازة."</p>
-                                        <h3 class="pt-2 pb-2 fs-4 text-black-50">Ahmed Mohamed</h3>
-                                        <div class="container-img-comment pt-3 pb-3">
-                                            <img src="./public/img/man-1690965_640.jpg" alt="أحمد العلي">
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <div class="swiper-slide">
-                                    <div class="card center p-4">
-                                        <p class="pt-2 pb-2 fs-3">"أفضل تجربة فندقية مررت بها! الخدمة كانت ممتازة."</p>
-                                        <h3 class="pt-2 pb-2 fs-4 text-black-50">Ahmed Mohamed</h3>
-                                        <div class="container-img-comment pt-3 pb-3">
-                                            <img src="./public/img/sun-7350734_640.jpg" alt="أحمد العلي">
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <div class="swiper-slide">
-                                    <div class="card center p-4">
-                                        <p class="pt-2 pb-2 fs-3">"أفضل تجربة فندقية مررت بها! الخدمة كانت ممتازة."</p>
-                                        <h3 class="pt-2 pb-2 fs-4 text-black-50">Ahmed Mohamed</h3>
-                                        <div class="container-img-comment pt-3 pb-3">
-                                            <img src="./public/img/man-1690965_640.jpg" alt="أحمد العلي">
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <div class="swiper-slide">
-                                    <div class="card center p-4">
-                                        <p class="pt-2 pb-2 fs-3">"أفضل تجربة فندقية مررت بها! الخدمة كانت ممتازة."</p>
-                                        <h3 class="pt-2 pb-2 fs-4 text-black-50">Ahmed Mohamed</h3>
-                                        <div class="container-img-comment pt-3 pb-3">
-                                            <img src="./public/img/sun-7350734_640.jpg" alt="أحمد العلي">
-                                        </div>
-                                    </div>
-                                </div>
-                               
                             </div>
+
+                            <div class="swiper-slide">
+                                <div class="card center p-4">
+                                    <p class="pt-2 pb-2 fs-3">"أفضل تجربة فندقية مررت بها! الخدمة كانت ممتازة."</p>
+                                    <h3 class="pt-2 pb-2 fs-4 text-black-50">Ahmed Mohamed</h3>
+                                    <div class="container-img-comment pt-3 pb-3">
+                                        <img src="./public/img/sun-7350734_640.jpg" alt="أحمد العلي">
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="swiper-slide">
+                                <div class="card center p-4">
+                                    <p class="pt-2 pb-2 fs-3">"أفضل تجربة فندقية مررت بها! الخدمة كانت ممتازة."</p>
+                                    <h3 class="pt-2 pb-2 fs-4 text-black-50">Ahmed Mohamed</h3>
+                                    <div class="container-img-comment pt-3 pb-3">
+                                        <img src="./public/img/man-1690965_640.jpg" alt="أحمد العلي">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="card center p-4">
+                                    <p class="pt-2 pb-2 fs-3">"أفضل تجربة فندقية مررت بها! الخدمة كانت ممتازة."</p>
+                                    <h3 class="pt-2 pb-2 fs-4 text-black-50">Ahmed Mohamed</h3>
+                                    <div class="container-img-comment pt-3 pb-3">
+                                        <img src="./public/img/sun-7350734_640.jpg" alt="أحمد العلي">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="card center p-4">
+                                    <p class="pt-2 pb-2 fs-3">"أفضل تجربة فندقية مررت بها! الخدمة كانت ممتازة."</p>
+                                    <h3 class="pt-2 pb-2 fs-4 text-black-50">Ahmed Mohamed</h3>
+                                    <div class="container-img-comment pt-3 pb-3">
+                                        <img src="./public/img/man-1690965_640.jpg" alt="أحمد العلي">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="card center p-4">
+                                    <p class="pt-2 pb-2 fs-3">"أفضل تجربة فندقية مررت بها! الخدمة كانت ممتازة."</p>
+                                    <h3 class="pt-2 pb-2 fs-4 text-black-50">Ahmed Mohamed</h3>
+                                    <div class="container-img-comment pt-3 pb-3">
+                                        <img src="./public/img/sun-7350734_640.jpg" alt="أحمد العلي">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="card center p-4">
+                                    <p class="pt-2 pb-2 fs-3">"أفضل تجربة فندقية مررت بها! الخدمة كانت ممتازة."</p>
+                                    <h3 class="pt-2 pb-2 fs-4 text-black-50">Ahmed Mohamed</h3>
+                                    <div class="container-img-comment pt-3 pb-3">
+                                        <img src="./public/img/man-1690965_640.jpg" alt="أحمد العلي">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="card center p-4">
+                                    <p class="pt-2 pb-2 fs-3">"أفضل تجربة فندقية مررت بها! الخدمة كانت ممتازة."</p>
+                                    <h3 class="pt-2 pb-2 fs-4 text-black-50">Ahmed Mohamed</h3>
+                                    <div class="container-img-comment pt-3 pb-3">
+                                        <img src="./public/img/sun-7350734_640.jpg" alt="أحمد العلي">
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
+                    </div>
 
                 </div>
             </div>
