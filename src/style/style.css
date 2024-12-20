@@ -71,83 +71,124 @@ header {
 /* end hero */
 /* start about */
 
-.about .text-about-answer{
-    max-height: 430px; 
+.about .text-about-answer {
+    max-height: 430px;
     box-shadow: inset 0 0 13px -7px black;
 }
-.about .nav-link{
+
+.about .nav-link {
     border-left: 1px solid var(--orang-color);
     color: var(--black-color);
 }
-.about .nav-link :hover{
+
+.about .nav-link :hover {
     color: var(--white-color);
     background-color: var(--orang-color);
 }
-.about .nav-link:focus{
+
+.about .nav-link:focus {
     color: var(--white-color);
 }
-.about .nav-link.active{
+
+.about .nav-link.active {
     background-color: var(--orang-color);
 
 }
 
 @media (max-width: 445px) {
-    .about nav{
+    .about nav {
         padding: 0;
     }
-    .about nav a{
+
+    .about nav a {
         padding: 5px;
     }
-    .about .text-about-cuis{
+
+    .about .text-about-cuis {
         font-size: .9rem;
     }
 }
 
 /* end about */
-/* start scroll bar */
-.scroll-bar .slider-container {
-    position: relative;
-    width: 80%;
-    overflow-x: auto;
-    /* إضافة شريط التمرير */
-    white-space: nowrap;
-    /* عدم تكسير الأسطر في الصور */
-    scroll-behavior: smooth;
-    /* لتحسين التمرير */
+.cd {
+    /* .container {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    } */
+
+    .swiper {
+        width: 100%;
+        height: 400px;
+        position: relative;
+
+    }
+
+    .swiper img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+
+    }
+    .mySwiper-2 img{
+        height: 70px;
+        width: 100%;
+    }
+
+    .text-overlay {
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 10px;
+        border-radius: 5px;
+        text-align: left;
+    }
+
+    .text-overlay h4 {
+        margin: 0;
+        font-size: 18px;
+        font-weight: bold;
+    }
+    
+    .text-overlay p {
+        margin: 5px 0 0;
+        font-size: 14px;
+    }
+
+    @media (max-width: 768px) {
+        .swiper {
+            height: 200px;
+        }
+
+        .text-overlay h4 {
+            font-size: 14px;
+        }
+
+        .text-overlay p {
+            font-size: 10px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .swiper {
+            height: 150px;
+        }
+
+        .text-overlay h4 {
+            margin: 0;
+            font-size: 11px;
+        }
+
+        .text-overlay p {
+            font-size: 7px;
+        }
+
+    }
+
 }
-
-.scroll-bar .slider {
-    display: inline-block;
-}
-
-.scroll-bar .slider img {
-    width: 100%;
-    height: auto;
-    display: inline-block;
-    /* لضمان عرض الصور في صف واحد */
-}
-
-.scroll-bar .fog {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 15%;
-    background: linear-gradient(to right, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0) 100%);
-    z-index: 1;
-}
-
-.scroll-bar .fog-left {
-    left: 0;
-}
-
-.scroll-bar .fog-right {
-    right: 0;
-    transform: scaleX(-1);
-    /* لإضافة تأثير الضباب mirrored على الجانب الأيمن */
-}
-
-
-
 
 
 
