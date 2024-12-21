@@ -36,9 +36,7 @@ header {
 
 .navbar {
     position: fixed;
-    width: 75%;
-    border-radius: 28px;
-    margin: 20px 0 0 0;
+    width: 100%;
     z-index: 100;
     transition: 0.3s ease, padding 0.3s ease;
     background-color: rgba(194, 194, 194, 0.396);
@@ -46,7 +44,10 @@ header {
 }
 
 .navbar.scrolled {
+    border-radius: 28px;
+    width: 75%;
     padding: 5px 0;
+    margin: 20px 0 0 0;
 }
 
 .navbar.not-scroll {
