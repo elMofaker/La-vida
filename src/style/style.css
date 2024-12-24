@@ -172,41 +172,39 @@ header {
     font-size: 14px;
 }
 
-
+/* 
 @media (max-width: 768px) {
-    .available-rooms {
 
-        .swiper {
+        .available-rooms .swiper {
             height: 200px;
         }
 
-        .text-overlay h4 {
+        .available-rooms .text-overlay h4 {
             font-size: 14px;
         }
 
-        .text-overlay p {
+        .available-rooms .text-overlay p {
             font-size: 10px;
         }
-    }
+    
 }
 
 @media (max-width: 480px) {
-    .available-rooms {
-        .swiper {
+
+        .available-rooms .swiper {
             height: 150px;
         }
 
-        .text-overlay h4 {
+        .available-rooms .text-overlay h4 {
             margin: 0;
             font-size: 11px;
         }
 
-        .text-overlay p {
+        .available-rooms .text-overlay p {
             font-size: 7px;
         }
-    }
 
-}
+} */
 
 
 
