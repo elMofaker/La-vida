@@ -358,53 +358,60 @@
     <!-- غرف مختلفة -->
 
     <!-- start available-rooms -->
-    <section id="available-rooms" class="available-rooms"
-        style="box-shadow: 0 -7px 18px -12px black;">
-        <h2>Available Rooms & Pricing</h2>
-        <div class="container">
-            <div class="swiper mySwiper-card-room">
-                <div class="swiper-wrapper">
-                    <!-- Card 1 -->
-                    <div class="swiper-slide">
-                        <div class="room-pricing box" onclick="window.location.href='#booking';">
-                            <img src="./public/img/bedroom-3475656_640 (1).jpg" alt="Deluxe Room" class="room-image">
-                            <h3>Deluxe Room</h3>
-                            <p>Available rooms: <span id="deluxe-rooms-available">20</span></p>
-                            <p>Price per night: <span id="deluxe-price">$200</span></p>
-                            <p>Luxurious accommodation with a stunning view. Perfect for couples or individuals seeking
-                                comfort and elegance.</p>
+    <section id="available-rooms" class="pt-5 pb-5" style="box-shadow: 0 -7px 18px -12px black;">
+        <div class="container pt-4">
+            <h2 class="text-center fw-bold fs-2">Available Rooms & Pricing</h2>
+            <p class="text-center">The Max Hotel is one of the best hotels in the world, offering you a unique
+                experience with all the luxurious
+                facilities you need for a comfortable stay.</p>
+            <hr>
+            <div class="container pt-5 pb-5">
+                <div class="swiper mySwiper-card-room">
+                    <div class="swiper-wrapper">
+                        <!-- Card 1 -->
+                        <div class="swiper-slide">
+                            <div class="room-pricing box" onclick="window.location.href='#booking';">
+                                <img src="./public/img/bedroom-3475656_640 (1).jpg" alt="Deluxe Room"
+                                    class="room-image">
+                                <h3>Deluxe Room</h3>
+                                <p>Available rooms: <span id="deluxe-rooms-available">20</span></p>
+                                <p>Price per night: <span id="deluxe-price">$200</span></p>
+                                <p>Luxurious accommodation with a stunning view. Perfect for couples or individuals
+                                    seeking
+                                    comfort and elegance.</p>
+                            </div>
                         </div>
-                    </div>
-                    <!-- Card 2 -->
-                    <div class="swiper-slide">
-                        <div class="room-pricing box" onclick="window.location.href='#booking';">
-                            <img src="./public/img/bedroom-3475656_640 (1).jpg" alt="Standard Room" class="room-image">
-                            <h3>Standard Room</h3>
-                            <p>Available rooms: <span id="standard-rooms-available">15</span></p>
-                            <p>Price per night: <span id="standard-price">$150</span></p>
-                            <p>Comfortable and affordable accommodation for individuals or small families.</p>
+                        <!-- Card 2 -->
+                        <div class="swiper-slide">
+                            <div class="room-pricing box" onclick="window.location.href='#booking';">
+                                <img src="./public/img/bedroom-3475656_640 (1).jpg" alt="Standard Room"
+                                    class="room-image">
+                                <h3>Standard Room</h3>
+                                <p>Available rooms: <span id="standard-rooms-available">15</span></p>
+                                <p>Price per night: <span id="standard-price">$150</span></p>
+                                <p>Comfortable and affordable accommodation for individuals or small families.</p>
+                            </div>
                         </div>
-                    </div>
-                    <!-- Card 3 -->
-                    <div class="swiper-slide">
-                        <div class="room-pricing box" onclick="window.location.href='#booking';">
-                            <img src="./public/img/bedroom-3475656_640 (1).jpg" alt="Suite Room" class="room-image">
-                            <h3>Suite Room</h3>
-                            <p>Available rooms: <span id="suite-rooms-available">10</span></p>
-                            <p>Price per night: <span id="suite-price">$350</span></p>
-                            <p>Exclusive luxury suite with top-notch amenities, ideal for those looking for ultimate
-                                comfort.</p>
+                        <!-- Card 3 -->
+                        <div class="swiper-slide">
+                            <div class="room-pricing box" onclick="window.location.href='#booking';">
+                                <img src="./public/img/bedroom-3475656_640 (1).jpg" alt="Suite Room" class="room-image">
+                                <h3>Suite Room</h3>
+                                <p>Available rooms: <span id="suite-rooms-available">10</span></p>
+                                <p>Price per night: <span id="suite-price">$350</span></p>
+                                <p>Exclusive luxury suite with top-notch amenities, ideal for those looking for ultimate
+                                    comfort.</p>
+                            </div>
                         </div>
+                        <!-- Add more cards as needed -->
                     </div>
-                    <!-- Add more cards as needed -->
+                    <div class="swiper-pagination"></div>
                 </div>
-                <div class="swiper-pagination"></div>
             </div>
-        </div>
     </section>
     <!-- end available-rooms -->
     <!-- مكان الحجز -->
-    <section id="booking" class="booking pt-5 pb-5" >
+    <section id="booking" class="booking pt-5 pb-5">
         <div class="container">
             <div class="row center">
                 <div class="container col-lg-4 col-md-6 col-sm-12 pt-4 pb-4 p-4" style="border-right: 1px solid black;">
@@ -496,7 +503,7 @@
     </section>
 
     <!-- مجموعةمن االخدمات المقدمة من الفندق -->
-    <section id="services" class="services" >
+    <section id="services" class="services">
         <h2>Our services</h2>
         <div class="service-list">
             <div class="service" onclick="window.location.href='#booking';">
@@ -690,9 +697,6 @@
             grabCursor: true,
         });
 
-    </script>
-
-    <script>
         var swiper = new Swiper(".mySwiper-card-room", {
             effect: "coverflow",  // استخدام تأثير Coverflow
             grabCursor: true,     // إظهار المؤشر على شكل يد عند السحب
@@ -711,21 +715,26 @@
             breakpoints: {
                 // للعرض الأكبر من 1024px (الشاشات الكبيرة)
                 1024: {
-                    slidesPerView: 4,   // عرض 3 كروت في نفس الوقت
+                    slidesPerView: 3,   // عرض 3 كروت في نفس الوقت
                     spaceBetween: 20,   // المسافة بين الكروت
                 },
                 // للعرض الأكبر من 768px وأقل من 1024px (الشاشات المتوسطة)
                 768: {
-                    slidesPerView: 2,   // عرض 2 كروت في نفس الوقت
+                    slidesPerView: 2.5,   // عرض 2 كروت في نفس الوقت
                     spaceBetween: 20,   // المسافة بين الكروت
                 },
                 // للعرض الأصغر من 768px (الشاشات الصغيرة)
                 576: {
-                    slidesPerView: 1,   // عرض كرت واحد في نفس الوقت
+                    slidesPerView: 1.5,   // عرض كرت واحد في نفس الوقت
+                    spaceBetween: 10,   // المسافة بين الكروت
+                },
+                0: {
+                    slidesPerView: 1.5,   // عرض كرت واحد في نفس الوقت
                     spaceBetween: 10,   // المسافة بين الكروت
                 }
             }
         });
+
     </script>
 
 </body>

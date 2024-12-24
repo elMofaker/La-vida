@@ -338,13 +338,13 @@ select {
 /* تغيير لون الحدود عند التركيز على الحقول (input, select) */
 input:focus,
 select:focus {
-    border-color: #ff9900;
+    border-color: var(--orang-color);
     /* تغيير لون الحدود إلى البرتقالي عند التركيز */
 }
 
 /* تنسيق زر الإرسال */
 .submit-btn {
-    background-color: #ff9900;
+    background-color: var(--orang-color);
     /* تعيين خلفية الزر إلى اللون البرتقالي */
     color: white;
     /* تعيين لون النص داخل الزر إلى الأبيض */
@@ -412,15 +412,6 @@ select:focus {
 .accordion-button:focus {
     box-shadow: none;
 
-}
-
-.available-rooms {
-    text-align: center;
-    /* محاذاة النصوص داخل القسم إلى المنتصف */
-    padding: 50px;
-    /* إضافة حشوة داخلية بمقدار 50px حول محتوى القسم */
-    background-color: #f4f4f4;
-    /* تعيين خلفية القسم إلى اللون الرمادي الفاتح */
 }
 
 /* تنسيق قائمة تسعيرات الغرف */
@@ -499,7 +490,7 @@ select:focus {
 .room-pricing span {
     font-weight: bold;
     /* جعل النص داخل العنصر span عريضًا */
-    color: #e74c3c;
+    color: var(--orang-color);
     /* تعيين لون النص إلى اللون الأحمر الفاتح */
 }
 
