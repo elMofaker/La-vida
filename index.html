@@ -98,7 +98,7 @@
                 experience with all the luxurious
                 facilities you need for a comfortable stay.</p>
             <hr>
-            <div class="row">
+            <div class="row center">
                 <div class="col-lg-6 col-md-12 col-sm-12 pt-4 pb-4">
                     <div class="row center">
                         <div class="col-5 pt-4 pb-4 text-about-cuis">
@@ -202,7 +202,7 @@
                                 <img src="./public/img/restaurant-449952_640.jpg" />
                             </div>
                         </div>
-                        <div class="swiper-pagination"></div>
+                        <div class="swiper-pagination" style="bottom: -40px;"></div>
                     </div>
                 </div>
             </div>
@@ -357,62 +357,58 @@
     <!-- end scroll bar -->
     <!-- غرف مختلفة -->
 
-    <!-- الغرف المتاحة واسعارها -->
-    <section id="available-rooms" class="available-rooms" data-aos="fade-up" data-aos-duration="1000" style="box-shadow: 0 -7px 18px -12px black;">
-        <h2>Available Rooms & Pricing</h2>
-        <div class="room-pricing-list">
-            <div class="room-pricing box" data-aos="zoom-in" data-aos-duration="1000"
-                onclick="window.location.href='#booking';">
-                <img src="./public/img/bedroom-3475656_640 (1).jpg" alt="Deluxe Room" class="room-image">
-                <h3>Deluxe Room</h3>
-                <p>Available rooms: <span id="deluxe-rooms-available">20</span></p>
-                <p>Price per night: <span id="deluxe-price">$200</span></p>
-                <p>Luxurious accommodation with a stunning view. Perfect for couples or individuals seeking comfort and
-                    elegance.</p>
+    <!-- start available-rooms -->
+    <section id="available-rooms" class="available-rooms" data-aos="fade-up" data-aos-duration="1000"
+    style="box-shadow: 0 -7px 18px -12px black;">
+    <h2>Available Rooms & Pricing</h2>
+    <div class="container">
+        <div class="swiper mySwiper-card-room">
+            <div class="swiper-wrapper">
+                <!-- Card 1 -->
+                <div class="swiper-slide">
+                    <div class="room-pricing box" onclick="window.location.href='#booking';">
+                        <img src="./public/img/bedroom-3475656_640 (1).jpg" alt="Deluxe Room" class="room-image">
+                        <h3>Deluxe Room</h3>
+                        <p>Available rooms: <span id="deluxe-rooms-available">20</span></p>
+                        <p>Price per night: <span id="deluxe-price">$200</span></p>
+                        <p>Luxurious accommodation with a stunning view. Perfect for couples or individuals seeking comfort and elegance.</p>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="swiper-slide">
+                    <div class="room-pricing box" onclick="window.location.href='#booking';">
+                        <img src="./public/img/bedroom-3475656_640 (1).jpg" alt="Standard Room" class="room-image">
+                        <h3>Standard Room</h3>
+                        <p>Available rooms: <span id="standard-rooms-available">15</span></p>
+                        <p>Price per night: <span id="standard-price">$150</span></p>
+                        <p>Comfortable and affordable accommodation for individuals or small families.</p>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="swiper-slide">
+                    <div class="room-pricing box" onclick="window.location.href='#booking';">
+                        <img src="./public/img/bedroom-3475656_640 (1).jpg" alt="Suite Room" class="room-image">
+                        <h3>Suite Room</h3>
+                        <p>Available rooms: <span id="suite-rooms-available">10</span></p>
+                        <p>Price per night: <span id="suite-price">$350</span></p>
+                        <p>Exclusive luxury suite with top-notch amenities, ideal for those looking for ultimate comfort.</p>
+                    </div>
+                </div>
+                <!-- Add more cards as needed -->
             </div>
-            <div class="room-pricing box" data-aos="zoom-in" data-aos-duration="1000"
-                onclick="window.location.href='#booking';">
-                <img src="./public/img/employee-7366213_640.jpg" alt="Executive Room" class="room-image">
-                <h3>Executive Room</h3>
-                <p>Available rooms: <span id="executive-rooms-available">25</span></p>
-                <p>Price per night: <span id="executive-price">$300</span></p>
-                <p>Perfect for business travelers, offering spacious work areas and premium amenities for a comfortable
-                    stay.</p>
-            </div>
-            <div class="room-pricing box" data-aos="zoom-in" data-aos-duration="1000"
-                onclick="window.location.href='#booking';">
-                <img src="./public/img/hotel-1979406_640.jpg" alt="Luxury Suite" class="room-image">
-                <h3>Luxury Suite</h3>
-                <p>Available rooms: <span id="luxury-suite-rooms-available">30</span></p>
-                <p>Price per night: <span id="luxury-suite-price">$500</span></p>
-                <p>Experience ultimate luxury in our spacious suites, designed for those seeking the finest in comfort
-                    and opulence.</p>
-            </div>
-            <div class="room-pricing box" data-aos="zoom-in" data-aos-duration="1000"
-                onclick="window.location.href='#booking';">
-                <img src="./public/img/sea-943428_640.jpg" alt="Private Suite" class="room-image">
-                <h3>Private Suite</h3>
-                <p>Available rooms: <span id="private-suite-rooms-available">10</span></p>
-                <p>Price per night: <span id="private-suite-price">$1000</span></p>
-                <p>For the ultimate exclusive experience, our private suite offers unparalleled privacy, luxury, and
-                    views.</p>
-            </div>
-            <div class="room-pricing box" data-aos="zoom-in" data-aos-duration="1000"
-                onclick="window.location.href='#booking';">
-                <img src="./public/img/whisky-8381774_640.jpg" alt="Family Suite" class="room-image">
-                <h3>Family Suite</h3>
-                <p>Available rooms: <span id="family-suite-rooms-available">15</span></p>
-                <p>Price per night: <span id="family-suite-price">$600</span></p>
-                <p>Our spacious family suite offers comfort and relaxation for families with children. The perfect
-                    choice for creating unforgettable family memories.</p>
-            </div>
+            <div class="swiper-pagination"></div>
         </div>
-    </section>
+    </div>
+</section>
 
+
+
+
+    <!-- end available-rooms -->
     <!-- مكان الحجز -->
     <section id="booking" class="booking pt-5 pb-5" data-aos="fade-up" data-aos-duration="1000">
-        <div class="conainer">
-            <div class="row">
+        <div class="container">
+            <div class="row center">
                 <div class="container col-lg-4 col-md-6 col-sm-12 pt-4 pb-4 p-4" style="border-right: 1px solid black;">
                     <h2>Book your stay</h2>
                     <form action="#" method="POST" id="booking-form">
@@ -433,14 +429,15 @@
                                 <option value="4">4</option>
                             </select>
                         </div>
-                        <button type="submit" class="submit-btn">Confirm your reservation</button> <!-- زر تسجيل الحجز -->
+                        <button type="submit" class="submit-btn">Confirm your reservation</button>
+                        <!-- زر تسجيل الحجز -->
                         <div id="confirmation-message" class="confirmation-message"></div>
                     </form>
                 </div>
-    
+
                 <div class="col-lg-6 col-md-6 col-sm-12 p-4">
                     <h2>Some questions you may need</h2>
-    
+
                     <div class="accordion accordion-flush" id="accordionFlushExample">
                         <div class="accordion-item">
                             <h2 class="accordion-header">
@@ -453,7 +450,8 @@
                             <div id="flush-collapseOne" class="accordion-collapse collapse"
                                 data-bs-parent="#accordionFlushExample">
                                 <div class="accordion-body">Placeholder content for this accordion, which is intended to
-                                    demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion
+                                    demonstrate the <code>.accordion-flush</code> class. This is the first item's
+                                    accordion
                                     body.</div>
                             </div>
                         </div>
@@ -468,7 +466,8 @@
                             <div id="flush-collapseTwo" class="accordion-collapse collapse"
                                 data-bs-parent="#accordionFlushExample">
                                 <div class="accordion-body">Placeholder content for this accordion, which is intended to
-                                    demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion
+                                    demonstrate the <code>.accordion-flush</code> class. This is the second item's
+                                    accordion
                                     body. Let's imagine this being filled with some actual content.</div>
                             </div>
                         </div>
@@ -483,9 +482,12 @@
                             <div id="flush-collapseThree" class="accordion-collapse collapse"
                                 data-bs-parent="#accordionFlushExample">
                                 <div class="accordion-body">Placeholder content for this accordion, which is intended to
-                                    demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion
-                                    body. Nothing more exciting happening here in terms of content, but just filling up the
-                                    space to make it look, at least at first glance, a bit more representative of how this
+                                    demonstrate the <code>.accordion-flush</code> class. This is the third item's
+                                    accordion
+                                    body. Nothing more exciting happening here in terms of content, but just filling up
+                                    the
+                                    space to make it look, at least at first glance, a bit more representative of how
+                                    this
                                     would look in a real-world application.</div>
                             </div>
                         </div>
@@ -512,10 +514,10 @@
         </div>
     </section>
 
-    <!-- مكان خاص بتقيم المتابعين للفندق -->
-    <section id="testimonials" class="testimonials" data-aos="fade-up" data-aos-duration="1000">
-        <div class="conainer">
-            <div class="row">
+    <!-- start comment -->
+    <section id="testimonials" class="testimonials overflow-x-hidden" data-aos="fade-up" data-aos-duration="1000">
+        <div class="container">
+            <div class="row center">
                 <div class="col-lg-6 col-md-6 col-sm-12">
                     <div class="reviews">
                         <h2>Visitor ratings</h2>
@@ -528,7 +530,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6 col-md-6 col-sm-12 p-5">
+                <div class="col-lg-6 col-md-6 col-sm-12 p-5 text-center">
                     <h2>Customer opinions</h2>
 
                     <div class="swiper mySwiper-comment w-100 h-auto">
@@ -621,10 +623,8 @@
                 </div>
             </div>
         </div>
-
-
     </section>
-
+    <!-- end comment -->
     <footer>
         <p>&copy;2024 Max Hotel. All rights reserved</p>
     </footer>
@@ -687,11 +687,44 @@
             },
         });
 
-        var swiper = new Swiper(".mySwiper-comment", {
-            effect: "cards",
-            grabCursor: true,
-        });
     </script>
+
+<script>
+    var swiper = new Swiper(".mySwiper-card-room", {
+        effect: "coverflow",  // استخدام تأثير Coverflow
+        grabCursor: true,     // إظهار المؤشر على شكل يد عند السحب
+        centeredSlides: true, // جعل الكروت في المنتصف
+        loop: true,           // تمكين التكرار
+        coverflowEffect: {
+            rotate: 50,       // زاوية التدوير
+            stretch: 0,       // التمدد بين الكروت
+            depth: 100,       // عمق التغيير بين الكروت
+            modifier: 1,      // تأثير التعديل
+            slideShadows: false, // إزالة الظلال على الكروت
+        },
+        pagination: {
+            el: ".swiper-pagination", // تفعيل الـ pagination
+        },
+        breakpoints: {
+            // للعرض الأكبر من 1024px (الشاشات الكبيرة)
+            1024: {
+                slidesPerView: 4,   // عرض 3 كروت في نفس الوقت
+                spaceBetween: 20,   // المسافة بين الكروت
+            },
+            // للعرض الأكبر من 768px وأقل من 1024px (الشاشات المتوسطة)
+            768: {
+                slidesPerView: 2,   // عرض 2 كروت في نفس الوقت
+                spaceBetween: 20,   // المسافة بين الكروت
+            },
+            // للعرض الأصغر من 768px (الشاشات الصغيرة)
+            576: {
+                slidesPerView: 1,   // عرض كرت واحد في نفس الوقت
+                spaceBetween: 10,   // المسافة بين الكروت
+            }
+        }
+    });
+</script>
+
 </body>
 
 </html>

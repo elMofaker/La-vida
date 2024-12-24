@@ -3,6 +3,7 @@
     --white-color: #fff;
     --rgba-black-color: #ffffff14;
     --orang-color: #e68900;
+    --orang-color-hover: #e68a00be;
 }
 
 * {
@@ -10,7 +11,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    
+
 }
 
 img {
@@ -23,8 +24,8 @@ img {
     align-items: center;
 }
 
-.container-shadow-bottom{
-    box-shadow: 0 8px 14px -12px var(--black-color); 
+.container-shadow-bottom {
+    box-shadow: 0 8px 14px -12px var(--black-color);
 }
 
 /* start nav */
@@ -83,6 +84,7 @@ header {
     box-shadow: inset 0 0 13px -7px black;
 }
 
+
 .about .nav-link {
     border-left: 1px solid var(--orang-color);
     color: var(--black-color);
@@ -117,6 +119,7 @@ header {
 }
 
 /* end about */
+
 .portfolio {
     /* .container {
         width: 100%;
@@ -132,40 +135,47 @@ header {
 
     }
 
-    .swiper img {
-        width: 100%;
-        height: auto;
-        object-fit: cover;
 
-    }
-    .mySwiper-2 img{
-        height: 70px;
-        width: 100%;
-    }
+}
 
-    .text-overlay {
-        position: absolute;
-        bottom: 10px;
-        left: 10px;
-        color: white;
-        background-color: rgba(0, 0, 0, 0.5);
-        padding: 10px;
-        border-radius: 5px;
-        text-align: left;
-    }
+.swiper img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
 
-    .text-overlay h4 {
-        margin: 0;
-        font-size: 18px;
-        font-weight: bold;
-    }
-    
-    .text-overlay p {
-        margin: 5px 0 0;
-        font-size: 14px;
-    }
+}
 
-    @media (max-width: 768px) {
+.mySwiper-2 img {
+    height: 70px;
+    width: 100%;
+}
+
+.text-overlay {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+    text-align: left;
+}
+
+.text-overlay h4 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.text-overlay p {
+    margin: 5px 0 0;
+    font-size: 14px;
+}
+
+
+@media (max-width: 768px) {
+    .available-rooms {
+
         .swiper {
             height: 200px;
         }
@@ -178,8 +188,10 @@ header {
             font-size: 10px;
         }
     }
+}
 
-    @media (max-width: 480px) {
+@media (max-width: 480px) {
+    .available-rooms {
         .swiper {
             height: 150px;
         }
@@ -192,14 +204,15 @@ header {
         .text-overlay p {
             font-size: 7px;
         }
-
     }
 
 }
+
+
+
 /* start scroll bar */
-.scroll-bar{
-    
-}
+.scroll-bar {}
+
 /* end scroll bar */
 /* start comment */
 .container-img-comment img {
@@ -355,20 +368,18 @@ select:focus {
 
 /* تأثير التمرير على زر الإرسال */
 .submit-btn:hover {
-    background-color: #e68900;
-    /* تغيير خلفية الزر إلى لون برتقالي أكثر إشراقًا عند التمرير */
+    background-color: var(--orang-color-hover)
+        /* تغيير خلفية الزر إلى لون برتقالي أكثر إشراقًا عند التمرير */
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: var(--orang-color-hover)
 }
 
 /* تنسيق رسالة التأكيد بعد الحجز */
 .confirmation-message {
-    margin-top: 20px;
-    /* إضافة مسافة من الأعلى بين الرسالة وباقي العناصر */
-    color: #28a745;
-    /* تعيين لون النص إلى الأخضر (لون النجاح) */
-    font-size: 1.2rem;
-    /* تعيين حجم الخط للرسالة */
-    display: none;
-    /* إخفاء الرسالة بشكل افتراضي */
+    color: var(--rgba-black-color);
+    background-color: var(--orang-color);
 }
 
 /* استجابة التصميم لأجهزة الشاشات الصغيرة (أقل من 768px) */
@@ -395,6 +406,16 @@ select:focus {
 }
 
 /* تنسيق قسم الغرف المتاحة */
+
+.accordion-button {
+    background-color: var(--orang-color);
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+
+}
+
 .available-rooms {
     text-align: center;
     /* محاذاة النصوص داخل القسم إلى المنتصف */
@@ -707,29 +728,6 @@ textarea {
     /* تضمين الحشوة والهامش في حساب الأبعاد */
 }
 
-/* تنسيق الزر button */
-button {
-    background-color: #4CAF50;
-    /* تعيين لون خلفية الزر إلى الأخضر */
-    color: white;
-    /* تعيين لون النص إلى الأبيض */
-    border: none;
-    /* إزالة الحد الخارجي للزر */
-    padding: 10px 20px;
-    /* إضافة حشوة داخلية من 10px من الأعلى والأسفل و 20px من الجانبين */
-    border-radius: 4px;
-    /* إضافة حواف دائرية للزر */
-    cursor: pointer;
-    /* تغيير شكل المؤشر إلى اليد عند التمرير فوق الزر */
-    font-size: 16px;
-    /* تعيين حجم الخط داخل الزر */
-}
-
-/* تأثير التمرير على الزر button */
-button:hover {
-    background-color: #45a049;
-    /* تغيير خلفية الزر إلى لون أخضر أغمق عند التمرير فوقه */
-}
 
 /* تنسيق قائمة التقييمات */
 #reviews-list {
@@ -780,7 +778,6 @@ button:hover {
     /* إضافة تأثير التحول التدريجي للظهور بمدة 1 ثانية */
 }
 
-/* تعريف حركة fade-in */
 @keyframes fadeIn {
     to {
         opacity: 1;
