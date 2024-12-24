@@ -172,39 +172,43 @@ header {
     font-size: 14px;
 }
 
-/* 
-@media (max-width: 768px) {
 
-        .available-rooms .swiper {
+@media (max-width: 768px) {
+    .portfolio {
+        .swiper {
             height: 200px;
         }
 
-        .available-rooms .text-overlay h4 {
+        .text-overlay h4 {
             font-size: 14px;
         }
 
-        .available-rooms .text-overlay p {
+        .text-overlay p {
             font-size: 10px;
         }
-    
+
+    }
+
 }
 
 @media (max-width: 480px) {
+    .portfolio {
 
-        .available-rooms .swiper {
+        .swiper {
             height: 150px;
         }
 
-        .available-rooms .text-overlay h4 {
+        .text-overlay h4 {
             margin: 0;
             font-size: 11px;
         }
 
-        .available-rooms .text-overlay p {
+        .text-overlay p {
             font-size: 7px;
         }
+    }
 
-} */
+}
 
 
 
@@ -366,17 +370,22 @@ select:focus {
 
 /* تأثير التمرير على زر الإرسال */
 .submit-btn:hover {
-    background-color: var(--orang-color-hover)
-        /* تغيير خلفية الزر إلى لون برتقالي أكثر إشراقًا عند التمرير */
+    background-color: var(--orang-color-hover);
+    color: var(--white-color);
 }
 
 .accordion-button:not(.collapsed) {
-    background-color: var(--orang-color-hover)
+    background-color: var(--orang-color-hover);
+    color: var(--white-color);
+}
+
+.accordion-button {
+    color: var(--white-color);
 }
 
 /* تنسيق رسالة التأكيد بعد الحجز */
 .confirmation-message {
-    color: var(--rgba-black-color);
+    color: var(--white-color);
     background-color: var(--orang-color);
 }
 
@@ -730,7 +739,7 @@ textarea {
     /* محاذاة القائمة إلى المنتصف */
     padding: 20px;
     /* إضافة حشوة داخلية داخل القائمة */
-    background-color: #fff;
+    background-color: var(--white-color);
     /* تعيين خلفية القائمة إلى اللون الأبيض */
     border-radius: 8px;
     /* إضافة حواف دائرية للقائمة */
