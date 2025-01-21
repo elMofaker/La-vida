@@ -54,7 +54,7 @@
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>
-                                <li><a class="dropdown-item text-nav" href="#trips-concerts.html">Trips and parties</a>
+                                <li><a class="dropdown-item text-nav" href="/src/pages/trips-concerts.html">Trips and parties</a>
                                 </li>
                             </ul>
                         </li>
@@ -417,6 +417,18 @@
                     style="border-right: 1px solid black;     box-shadow: inset 0 0 18px -11px black;">
                     <h2>Book your stay</h2>
                     <form action="#" method="POST" id="booking-form">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name <i class="fa-solid fa-user"></i></label>
+                            <input type="text" class="form-control" id="name" name="name" aria-describedby="nameHelp" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email <i class="fa-solid fa-envelope"></i></label>
+                            <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="phone" class="form-label">Number <i class="fa-solid fa-phone"></i></label>
+                            <input type="tel" class="form-control" id="phone" name="phone" aria-describedby="phoneHelp" required>
+                        </div>
                         <div class="form-group">
                             <label for="check-in">Arrival date:</label> <!-- موعد الوصول -->
                             <input type="date" id="check-in" name="check-in" required>
